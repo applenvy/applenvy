@@ -37,8 +37,7 @@ function calc_offset(x1, y1, x2, y2) {
 
     return [x1 + dx, y1 + dy];
 }
-
-
+/*
 function offset_card() {
     var card = document.getElementById("center-card");
     const direction = Math.atan2(canvas.height / 2 - cursor.y, canvas.width / 2 - cursor.x);
@@ -48,12 +47,10 @@ function offset_card() {
 
     const offset_x = Math.cos(direction) * curve;
     const offset_y = Math.sin(direction) * curve;
-    // card.style.transform = `translate(-50%, -50%) translate(${offset_x}px, ${offset_y}px)`;
     card.style.marginTop = offset_y + "px";
     card.style.marginLeft = offset_x + "px";
 }
-
-
+*/
 function resize_text() {
 
     const card_width = document.getElementById("center-card").offsetWidth;
@@ -91,7 +88,6 @@ function resize_text() {
 }
 
 // dots
-
     // params
 var spacing = 80;
 var radius = 2;
@@ -138,9 +134,7 @@ function draw_circle(x, y, r) {
     // regenerate dot array when resize window
 window.addEventListener("resize", init_canvas);
 
-
     // update canvas
-
 const fps = 40;
 function update() {
     setTimeout(() => {
