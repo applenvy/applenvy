@@ -153,25 +153,25 @@ footer a {
 
 #tag {
     position: absolute;
-    transform: translate(-50%, 5%);
+    transform: translate(-50%, 15%);
     z-index: -1;
     transition: 0.3s;
 }
 
 #discord:hover + #tag {
-    transform: translate(-172%, 5%)
+    transform: translate(-172%, 15%)
 }
 
 
 #email {
     position: absolute;
-    transform: translate(-105%, 5%);
+    transform: translate(-105%, 15%);
     z-index: -1;
     transition: 0.3s;
 }
 
 #mail:hover + #email {
-    transform: translate(10%, 5%);
+    transform: translate(10%, 15%);
 }
 
 .icon {
