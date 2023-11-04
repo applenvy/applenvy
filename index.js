@@ -4,6 +4,8 @@
 getCurrentCentralTime();
 resizeText();
 
+window.ondragstart = function() { return false; } 
+
 function getCurrentCentralTime() {
     let xhr = new XMLHttpRequest();
     const tzinfo = document.getElementById("tzinfo");
