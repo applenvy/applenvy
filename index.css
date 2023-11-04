@@ -86,16 +86,18 @@ p, h1, footer {
 
 #title {
     color:#ffffff;
-    margin: 0 auto;
+    text-align:center;
     height: auto;
     mix-blend-mode: exclusion;
-    transform: translateY(-48px);
 }
+
 #title h1 {
-    text-align: center;
-    font-size: 60px;
-    margin:0;
+    margin: 0;
     animation: 2s ease-in-out 0s 1 slidedown;
+}
+
+#title span{
+    display: inline-block;
 }
 
 #separator {

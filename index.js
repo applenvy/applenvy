@@ -34,8 +34,14 @@ function resizeText() {
 
     // TITLE
     const title = document.getElementById("title");
-    title.firstElementChild.style.fontSize = card_width / 6 + "px";
+    title.style.fontSize = card_width / 12 + "px";
     title.style.transform = `translateY(-${card_width / 7}px)`
+
+    const titleSpans = title.firstElementChild.children;
+    for(const span of titleSpans) {
+        span.style.margin = `0 -${card_width / 100}px`
+        span.style.fontSize = card_width / 10 + "px";
+    }
 
     // HORIZONTAL SEPARATOR
     const sep = document.getElementById("separator");
