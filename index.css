@@ -156,10 +156,12 @@ footer a {
     transform: translate(-50%, 15%);
     z-index: -1;
     transition: 0.3s;
+    display: none;
 }
 
 #discord:hover + #tag {
-    transform: translate(-172%, 15%)
+    transform: translate(-172%, 15%);
+    display: block;
 }
 
 
@@ -168,10 +170,12 @@ footer a {
     transform: translate(-105%, 15%);
     z-index: -1;
     transition: 0.3s;
+    display: none;
 }
 
 #mail:hover + #email {
     transform: translate(10%, 15%);
+    display: block;
 }
 
 .icon {
