@@ -1,9 +1,4 @@
 @font-face {
-    font-family: JosefinSans;
-    src: url("./JosefinSans-VariableFont_wght.ttf");
-}
-
-@font-face {
     font-family: zen-maru;
     src: url("./ZenMaruGothic-Regular.ttf");
 }
@@ -21,6 +16,15 @@ body {
     height: 100vh;
     background-color: #000000;
     animation: 6s ease-in-out 0s alternate infinite colorshift;
+}
+
+#vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20vw rgba(0, 0, 0, 0.6) inset;
 }
 
 canvas {
@@ -63,15 +67,15 @@ a:hover {
     border-radius: 0.3vw;
     animation: 2s ease-in-out 0s 1 slideup;
     opacity: 0.5;
-    box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: -0.4vw 0.4vw 0.3vw rgba(0, 0, 0, 0.5);
     align-items: center;
 
 }
 
 #center-card:hover {
-    -webkit-transform: translate(-50%, -50%) translateY(-5px);
-    transform: translate(-50%, -50%) translateY(-5px);
-    box-shadow: -13px 15px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate(-50%, -50%) translateY(-0.4vw);
+    transform: translate(-50%, -50%) translateY(-0.4vw);
+    box-shadow: -0.9vw 1.1vw 0.3vw rgba(0, 0, 0, 0.5);
 }
 
 /* INSIDE CARD */
@@ -127,43 +131,65 @@ footer {
 
 }
 
-#about * {
+footer p {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+footer a {
     display: inline-block;
 }
 
-#about p {
-    margin: 4px;
+#links {
+    background-color: #ffffff;
+    margin-bottom: 4px;
+    width: fit-content;
+    margin: 0 auto;
+    display: inline-block;
+    height: auto;
 }
 
-.vertsep {
-    background-color: #000000;
-    width: 1px;
-    height: 18px;
-    margin-bottom: -4px;
+#tag {
+    position: absolute;
+    transform: translate(-50%, 5%);
+    z-index: -1;
+    transition: 0.3s;
 }
-footer p {
-    margin: 0;
-    margin-bottom: 4px;
+
+#discord:hover + #tag {
+    transform: translate(-172%, 5%)
+}
+
+
+#email {
+    position: absolute;
+    transform: translate(-105%, 5%);
+    z-index: -1;
+    transition: 0.3s;
+}
+
+#mail:hover + #email {
+    transform: translate(10%, 5%);
 }
 
 .icon {
     transition: 0.3s;
     aspect-ratio: 1;
     margin: 0.5%;
+    z-index: 10;
 }
 
 .icon:hover {
-    transform: translate(3px, -3px);
-    filter: drop-shadow(-3px 3px 2px #000000) ;
+    transform: translate(0.15vw, -0.15vw);
+    filter: drop-shadow(-0.15vw 0.15vw 0.1vw #000000);
 }
-
 
 @keyframes slidedown {
     0% {
-        transform: translateY(-80px);
+        transform: translateY(-3vh);
     }
     20% {
-        transform: translateY(-70px);
+        transform: translateY(-3vh);
     }
     100% {
         transform: translateY(0px);
@@ -172,12 +198,12 @@ footer p {
 
 @keyframes slideup {
     0% {
-        margin-top: 50px;
+        margin-top: 2vh;
         opacity: 0;
     }
 
     20% {
-        margin-top: 50px;
+        margin-top: 2vh;
         opacity: 0;
     }
 

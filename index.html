@@ -2,10 +2,12 @@
 <html>
     <head>
         <script type="module" src="index.min.js"></script>
+        <script type="module" src="background.min.js"></script>
         </script>
         <link rel="stylesheet" href="index.min.css">
     </head>
     <body>
+        <div id="vignette"></div>
         <div class="content">
             <div id="center-card">
                 <div id="title">
@@ -28,13 +30,15 @@
                     </p>
                 </div>
                 <footer>
-                    <div id="about">
-                        <p>he/they</p><div class="vertsep"></div><p>central time</p><div class="vertsep"></div><p>adult</p>
+                    <div>
+                        <span>he/they - <span id="tzinfo">central time</span> - adult</span>
                     </div>
                     <p>my links:</p>
-                    <a href="https://discord.com/users/290983149507182592" target="_blank"><img class="icon" src="media/discord.svg"></a>
-                    <a href="https://www.roblox.com/users/57335486/profile" target="_blank"><img class="icon" src="media/roblox.svg"></a>
-                    <a href="mailto:apple@e.nvio.us" target="_blank"><img class="icon" src="media/gmail.svg"></a>
+                    <span id="links">
+                        <a href="https://discord.com/users/290983149507182592" target="_blank"><img class="icon" id="discord" src="media/discord.svg"><span class="name" id="tag">applenvy</span></a>
+                        <a href="https://www.roblox.com/users/57335486/profile" target="_blank"><img class="icon" src="media/roblox.svg"></a>
+                        <a href="mailto:apple@e.nvio.us" target="_blank"><img class="icon" id="mail" src="media/gmail.svg"><span class="name" id="email">apple@e.nvio.us</span></a>
+                    </span>
                 </footer>
             </div>
         </div>
