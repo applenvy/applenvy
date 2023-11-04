@@ -7,7 +7,7 @@ resizeText();
 function getCurrentCentralTime() {
     let xhr = new XMLHttpRequest();
     const tzinfo = document.getElementById("tzinfo");
-    xhr.open("GET", "http://worldtimeapi.org/api/timezone/America/Chicago");
+    xhr.open("GET", "https://worldtimeapi.org/api/timezone/America/Chicago");
     xhr.responseType = "json"
     xhr.onload = function() {
         if (xhr.status == 200) {
