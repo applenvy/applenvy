@@ -2,6 +2,7 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 // cursor positioning
+
 const cursor = {
     x: NaN,
     y: NaN,
@@ -14,6 +15,7 @@ window.addEventListener("pointermove", e => {
 });
 
 // dots
+
     // params
 var spacing = 80;
 var radius = 2;
@@ -58,13 +60,29 @@ function drawCircle(x, y, r) {
 window.addEventListener("resize", initCanvas);
 
     // update canvas
-const fps = 60;
+    // idk if this is more performant than usings setTimeout, but it seems smoother
+var now, then, elapsed, fpsInterval;
+function startUpdate(fps) {
+    fpsInterval = 1000 / fps;
+    then = performance.now();
+    update();
+}
+
 function update() {
 
-    setTimeout(() => {
-        requestAnimationFrame(update);
-    }, 1000 / fps);
+    requestAnimationFrame(update);
 
+    now = performance.now();
+    elapsed = now - then;
+
+    if (elapsed > fpsInterval) {
+        then = now - (elapsed % fpsInterval);
+        drawFrame();
+    }
+
+}
+
+function drawFrame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.beginPath();
@@ -93,4 +111,4 @@ function calcOffset(x1, y1, x2, y2) {
 }
 
 initCanvas();
-update();
+startUpdate(60);
