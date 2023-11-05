@@ -109,6 +109,10 @@ p, h1, footer {
     border-radius: 2px;
 }
 
+#card-content {
+    transform: translateY(-48px);
+}
+
 #card-content p {
     /* font-size: 24px; */
     /* font-size: min(2.7vh, 3.4vw); */
@@ -149,17 +153,19 @@ footer a {
     height: auto;
 }
 
+#links a {
+    white-space: nowrap;
+}
+
 #tag {
     position: absolute;
     transform: translate(-50%, 15%);
     z-index: -1;
     transition: 0.3s;
-    display: none;
 }
 
 #discord:hover + #tag {
     transform: translate(-172%, 15%);
-    display: block;
 }
 
 
@@ -168,12 +174,10 @@ footer a {
     transform: translate(-105%, 15%);
     z-index: -1;
     transition: 0.3s;
-    display: none;
 }
 
 #mail:hover + #email {
     transform: translate(10%, 15%);
-    display: block;
 }
 
 .icon {
