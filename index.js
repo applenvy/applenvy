@@ -13,9 +13,9 @@ function getCurrentCentralTime() {
     xhr.responseType = "json"
     xhr.onload = function() {
         if (xhr.status == 200) {
-            if (xhr.response.abbreviation = "CDT") {
+            if (xhr.response.abbreviation == "CDT") {
                 tzinfo.innerHTML = "CDT (UTC-5)";
-            } else if (xhr.response.abbreviation = "CST") {
+            } else if (xhr.response.abbreviation == "CST") {
                 tzinfo.innerHTML = "CST (UTC-6)";
             }
         } 
