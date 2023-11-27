@@ -54,6 +54,10 @@ function resizeText() {
     text.style.fontSize = card_width / 16 + "px";
     text.style.padding = `0 ${card_width / 18}px 6px`;
 
+    const contact = document.getElementById("contact");
+    contact.style.fontSize = card_width / 20 + "px";
+    contact.style.padding = `${card_width / 64}px 0`;
+
     // FOOTER
     const footer = document.getElementsByTagName("footer")[0];
     footer.style.fontSize = card_width / 22 + "px";
