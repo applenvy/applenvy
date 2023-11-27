@@ -64,7 +64,7 @@ a:hover {
     transform: translate(-50%, -50%);
     transition: 0.2s ease-out;
 
-    background-color: #ffffff;
+    background-color: #fce1c7;
     border-radius: 0.3vw;
     animation: 2s ease-in-out 0s 1 slideup;
     opacity: 0.5;
@@ -86,7 +86,7 @@ p, h1, footer {
 }
 
 #title {
-    color:#ffffff;
+    color:#fce1c7;
     text-align:center;
     height: auto;
     mix-blend-mode: exclusion;

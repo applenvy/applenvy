@@ -80,7 +80,6 @@ function changeColors(name) {
     const nameColor = computeNameColor(name);
     inputEl.style.color = nameColor;
     inputEl.style.textShadow = "0 0 8vw " + nameColor;
-    document.querySelector("canvas").style.color = nameColor;
     document.body.style.backgroundColor = nameColor;
     document.getElementById("invalid").style.backgroundColor = nameColor;
     validateUser(name);
