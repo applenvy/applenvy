@@ -1,11 +1,12 @@
 // warning: this is practically my foray into js 
-// i do not know formatting conventions
+// i do not know formatting conventions pls ignore the mixed cases
 
 getCurrentCentralTime();
 resizeText();
 
 window.ondragstart = function() { return false; } 
 
+// theres probably a better way to do this
 function getCurrentCentralTime() {
     let xhr = new XMLHttpRequest();
     const tzinfo = document.getElementById("tzinfo");

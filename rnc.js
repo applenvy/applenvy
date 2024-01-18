@@ -49,7 +49,7 @@ function computeNameColor(pName) {
     // console.log(getNameValue(pName) % colorTable.length);
     // return colorTable[getNameValue(pName) % colorTable.length];
     if (pName == "") return "#555555";
-    return colorTable[luaMod(getNameValue(pName), colorTable.length)];
+    return colorTable[luaMod(getNameValue(pName), colorTable.length)]; // le epic 0-index
 };
 
 const inputEl = document.getElementById("input");
@@ -85,16 +85,16 @@ function changeColors(name) {
     validateUser(name);
 }
 
+// idk why i decided to do this w/ regex
+// stole it from https://stackoverflow.com/questions/54391861
 const re = /^(?=^[^_]+_?[^_]+$)\w{3,20}$/
 const invalid = document.getElementById("invalid");
 function validateUser(pName) {
-    console.log(re.test(pName));
-    if (re.test(pName) || pName.length < 3) {
+    if (re.test(pName) && pName.length >= 3 || pName.length == 0) {
         invalid.style.opacity = 0;
     } else {
         invalid.style.opacity = 0.5;
     } 
-
 }
 
 // ^(?=^[^_]+_?[^_]+$)\w{3,20}$
